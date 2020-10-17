@@ -12,4 +12,4 @@ router.get("/", function (req, res) {
   });
 });
 
-module.exports = function (app) {}
+module.exports = products;

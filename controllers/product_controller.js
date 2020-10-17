@@ -8,7 +8,7 @@ router.get("/", function (req, res) {
       products: data
     };
     console.log(hbsObject);
-    res.render("index", hbsObject);
+    res.render("name", hbsObject);
   });
 });
 

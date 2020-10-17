@@ -14,8 +14,8 @@ var exphbs = require("express-handlebars");
 app.engine("handlebars", exphbs({ defaultLayout: "main" }));
 app.set("view engine", "handlebars");
 
-require("./routes/product-api-routes.js")(app);
-require("./routes/review-api-routes.js")(app);
+require("./controllers/product_controller.js")(app);
+require("./controllers/review_controller.js")(app);
 
 db.sequelize.sync({ force: true }).then(function() {
   app.listen(PORT, function() {

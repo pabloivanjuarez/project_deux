@@ -1,5 +1,15 @@
-var db = require("../models");
+var db = require("../models/product");
 
-module.exports = function(app) {
+var router = express.Router()
 
-}
+router.get("/", function (req, res) {
+  cat.all(function (data) {
+    var hbsObject = {
+      products: data
+    };
+    console.log(hbsObject);
+    res.render("index", hbsObject);
+  });
+});
+
+module.exports = function (app) {}

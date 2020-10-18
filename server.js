@@ -1,17 +1,19 @@
-var express = require("express");
+const express = require("express");
 
-var app = express();
-var PORT = process.env.PORT || 8080;
+const app = express();
+const PORT = process.env.PORT || 8080;
 
-var db = require("./models");
+const db = require("./models");
 
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 
 app.use(express.static("public"));
 
-var exphbs = require("express-handlebars");
-app.engine("handlebars", exphbs({ defaultLayout: "main" }));
+const Handlebars = require('handlebars');
+const {allowInsecurePrototypeAccess} = require('@handlebars/allow-prototype-access');
+const exphbs = require("express-handlebars");
+app.engine("handlebars", exphbs({ handlebars: allowInsecurePrototypeAccess(Handlebars) }));
 app.set("view engine", "handlebars");
 
 require("./controllers/product_controller.js")(app);

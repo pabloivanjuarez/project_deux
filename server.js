@@ -12,7 +12,7 @@ app.use(express.static("public"));
 
 const Handlebars = require('handlebars');
 const {allowInsecurePrototypeAccess} = require('@handlebars/allow-prototype-access');
-var exphbs = require("express-handlebars");
+const exphbs = require("express-handlebars");
 app.engine("handlebars", exphbs({ handlebars: allowInsecurePrototypeAccess(Handlebars) }));
 app.set("view engine", "handlebars");
 

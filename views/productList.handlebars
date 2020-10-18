@@ -1,15 +1,21 @@
 <div class="container-fluid">
-    <div class="row">
-        <div>
-            {{#each products}}
-                <div class="card">
-                <h6>{{name}}</h6>
-                <p>{{description}}</p>
-                <p>{{price}}</p>
+    {{#each products}}
+        <div class="card mb-3" style="max-width: 540px;">
+            <div class="row no-gutters">
+                <div class="col-md-4">
+                    <img src="{{img}}" class="card-img" alt="cat thumbnail">
                 </div>
-            {{/each}}
+                <div class="col-md-8">
+                    <div class="card-body">
+                        <h5 class="card-title">{{name}}</h5>
+                        <p class="card-text">{{description}}</p>
+                        <p class="card-text">{{price}}</p>
+                    </div>
+                </div>
+            </div>
         </div>
-    </div>
+    {{/each}}
+
 </div>
 
 

@@ -1,19 +1,46 @@
 <div class="container-fluid">
-    <img src="{{products.img}}"/>
+    <img src="{{products.img}}" />
     <h5>{{products.name}}</h5>
     <p>{{products.description}}</p>
     <p>{{products.price}}</p>
 
 </div>
-<div>
-    <h3>Reviews</h3>
-    {{#each reviews}}
-        <h5>{{title}}</h5>
-        <p>{{body}}</p>
-    {{/each}}
+
+<div class="row">
+    <div class="col-md-6 offset-md-3">
+        <h3>Reviews</h3>
+        <hr>
+        {{#each reviews}}
+            <h6>{{title}}</h6>
+            <p>{{body}}</p>
+            <hr>
+        {{/each}}
+        </br></br>
+                <h5>Add Review</h5>
+        <form id="add-review">
+            <div class="form-group">
+                <label for="title">Title:</label>
+                <input placeholder="Review Title" type="text" class="form-control" id="title">
+                <br />
+                <label for="body">Body:</label>
+                <textarea placeholder="Review Body" class="form-control" rows="3" id="body"></textarea>
+                <div class="form-group">
+                </div>
+                <button type="submit" class="btn btn-primary submit">Submit</button>
+            </div>
+        </form>
+    </div>
 </div>
 
 
-<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
-<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+    integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+    crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+    integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+    crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+    integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+    crossorigin="anonymous"></script>

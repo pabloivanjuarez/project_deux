@@ -1,4 +1,4 @@
-module.exports = function(sequelize, DataTypes) {
+module.exports = function (sequelize, DataTypes) {
     var Product = sequelize.define("Product", {
         name: {
             type: DataTypes.STRING,
@@ -15,18 +15,18 @@ module.exports = function(sequelize, DataTypes) {
             }
         },
         price: {
-            type:DataTypes.STRING,
+            type: DataTypes.DECIMAL,
             allowNull: false,
             validate: {
                 len: [1]
             }
         },
         img: {
-            type:DataTypes.STRING
+            type: DataTypes.STRING
         }
     });
 
-    Product.associate = function(models) {
+    Product.associate = function (models) {
         Product.hasMany(models.Review, {
             onDelete: "cascade"
         });

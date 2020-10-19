@@ -5,13 +5,13 @@ module.exports = function (app) {
     res.render("index");
   });
 
-  app.post("/api/products", function (req, res) {
+  app.post("/api/products", (req, res) => {
     db.Product.create(req.body).then(function (dbProduct) {
       res.json(dbProduct);
     });
   });
 
-  app.get("/products", function (req, res) {
+  app.get("/products", (req, res) => {
     db.Product.findAll({}).then(function (data) {
       res.render("productList", {
         products: data
@@ -19,7 +19,7 @@ module.exports = function (app) {
     });
   })
 
-  app.get("/products/:id", function (req, res) {
+  app.get("/products/:id", (req, res) => {
     db.Product.findOne({
       where: {
         id: req.params.id

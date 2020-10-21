@@ -17,7 +17,7 @@
                 <a class="nav-link" href="/products">Products</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="#">About Us</a>
+                <a class="nav-link" href="/about/">About Us</a>
             </li>
             <li class="nav-item">
                 <a class="nav-link" href="#">Contact</a>
@@ -29,56 +29,34 @@
     </div>
 </nav>
 {{!-- top nav bar end --}}
+
 {{!-- about copy cats container start --}}
 
 <div class="container-fluid h-100">
     <div class="row justify-content-center h-100 aboutText">
         <div class="col-sm-12 col-md-12 col-lg-12">
             <p class="headline">
-                Copy Cats duplicates kittens of all shapes and sizes. </p> 
+                Copy Cats is the world premier high-yield kitten enterprise. </p> 
                 
-                <p class="catCopy">Please review the different kittens we have to offer.  All of our kitties have been vaccinated, chipped, and box-trained and are ready to be shipped to your door.  All of our little fur babies will be pre-programmed with name recognition and common commands.  Please specify the kitten's name and language at checkout.  Toilet training and bilingual kittens are available.
+                <p class="catCopy">Since 1822 we've been connecting feline
+                friends with their future fur families. Our process for developing our kitty friends has changed over the decades, but one thing has always been the same: we deliver the friendliest and most adorable cats in the business.   
 
             </p>
-          
+            <p class="catCopy">Click here for our story!</p>
         </div>
     </div>
 </div>
 
 {{!-- about copy cats container end  --}}
 
-{{!-- cat cards  --}}
-<div class="container-fluid">
-    {{#each products}}
-    <div class="card mb-3" style="max-width: 540px;">
 
-        <div class="row no-gutters">
-            <div class="col-md-4">
-                <img src="{{img}}" class="card-img" alt="cat thumbnail">
-            </div>
-            <div class="col-md-8">
-                <div class="card-body">
-                    <h5 class="card-title"><a href="/products/{{id}}">{{name}}</a></h5>
-                    <p class="card-text">{{description}}</p>
-                    <p class="card-text">{{price}}</p>
-                </div>
-            </div>
-        </div>
-        
-    </div>
-</div>
-{{/each}}
-</div>
-{{!-- cat cards --}}
 
 <footer>
     <p class="footer">U of O Full-stack Boot Camp Project 2, October 2020 // all content copyright its respective owners // Copy Cat isn't a real service, please go to your nearest animal shelter to adopt a new furry family member</p> 
 </footer>
 
+{{!-- bootstrap javascript --}}
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js" crossorigin="anonymous"></script>
-<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
-    integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
-    crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
     integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
     crossorigin="anonymous"></script>

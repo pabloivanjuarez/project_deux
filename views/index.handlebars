@@ -1,17 +1,138 @@
+{{!-- top nav bar start --}}
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ml-auto">
+            <li class="nav-item active">
+                <a class="nav-link" href="./">Home <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="/products/3">Featured</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="/products">Products</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="./about">About Us</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">Contact</a>
+            </li>
+            <li class="shopping-cart-icon">
+                <a class="shopping-cart" href="#"><i class="fa fa-shopping-cart" aria-hidden="true"></i></a>
+            </li>
+        </ul>
+    </div>
+</nav>
+{{!-- top nav bar end --}}
+
+{{!-- cat title image container --}}
 <div class="container-fluid">
     <div class="row">
         <div class="jumbotron">
-            <h1 class="display-4">Hello, world!</h1>
-            <p class="lead">This is a simple hero unit, a simple jumbotron-style component for calling extra attention
-                to featured content or information.</p>
-            <hr class="my-4">
-            <p>It uses utility classes for typography and spacing to space content out within the larger container.</p>
-            <a class="btn btn-primary btn-lg" href="#" role="button">Learn more</a>
+
+            <div class="cat-box">
+                <img class="cat-title" src="../assets/images/copy_cats_title.png" />
+            </div>
+
+        </div>
+    </div>
+</div>
+{{!-- end cat title image container --}}
+
+{{!-- about copy cats container start --}}
+
+<div class="container-fluid h-100">
+    <div class="row justify-content-center h-100 aboutText">
+        <div class="col-sm-12 col-md-12 col-lg-12">
+            <p class="headline">
+                Copy Cats is the world premier high-yield kitten enterprise. </p> 
+                
+                <p class="catCopy">Since 1822 we've been connecting feline
+                friends with their future fur families. Our process for developing our kitty friends has changed over the decades, but one thing has always been the same: we deliver the friendliest and most adorable cats in the business.   
+
+            </p>
+            <p class="catCopy">Click here for our story!</p>
         </div>
     </div>
 </div>
 
+{{!-- about copy cats container end  --}}
 
+{{!-- featured cat start --}}
+
+<div class="container-fluid h-100">
+    <div class="featuredText row justify-content-center h-100">
+
+        <!-- LEFT SIDE -->
+
+        <div class="col-sm-12 col-md-12 col-lg-4 col-xl-4 hidden-md-down left">
+
+            <div class="row justify-content-center align-self-center">
+                <img class="featuredImage" src="../assets/images/cat_type_03th.jpg" />
+            </div>
+
+        </div>
+
+
+
+        <!-- RIGHT SIDE -->
+
+        <div class="col-sm-12 col-md-12 col-lg-8 col-xl-8 right">
+            <div>
+
+            </div>
+            <div>
+                <h2 class="featuredFont">
+                    Our featured kitty for the month of October!
+                </h2>
+                <p class="featuredCopy">
+                    Just in time for the Halloween Season, we're happy to announce overstock on our black kitten.
+                </p>
+                <p class="featuredCopy">
+                    These kittens are guaranteed to be a real treat!
+                </p>
+                <p class="featuredCopy">
+                    <a href="products/3">Click here for more information</a>!
+                </p>
+
+            </div>
+        </div>
+
+
+    </div>
+</div>
+
+{{!-- featured cat end --}}
+
+{{!-- more info copy cats start  --}}
+
+<div class="container-fluid h-100">
+    <div class="row justify-content-center h-100 moreInfo">
+        <div class="col-sm-12 col-md-12 col-lg-12">
+            <p class="headline">
+                Have questions about your new furry family member?</p> 
+                
+                <p class="catCopy">
+                    What should you feed your kitten?  How should you care for your new friend?  Is your kitten meowing backwards?
+
+            </p>
+            <p class="catCopy">Click here for answers to all of your questions</p>
+        </div>
+    </div>
+</div>
+
+{{!-- more info copy cats end  --}}
+
+<footer>
+    <p class="footer">U of O Full-stack Boot Camp Project 2, October 2020 // all content copyright its respective owners // Copy Cat isn't a real service, please go to your nearest animal shelter to adopt a new furry family member</p> 
+</footer>
+
+{{!-- bootstrap javascript --}}
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
     integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"

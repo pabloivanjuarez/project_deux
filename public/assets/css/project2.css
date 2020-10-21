@@ -1,0 +1,144 @@
+.navbar {
+    background-color: white !important;
+}
+
+body {
+    background-color: lightskyblue;
+}
+
+.jumbotron {
+    margin: auto;
+    background-image: url(../images/flower_bkgrnd.jpg);
+    opacity: 1;
+    background-color: lightslategray;
+}
+
+.cat-box {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.cat-title {
+    display: block;
+    width: 70%;
+    padding: auto;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.aboutText {
+    background-color: aliceblue;
+    width: 99%;
+    margin: auto;
+    margin-top: 10px;
+    padding: 20px;
+    border-radius: 15px;
+}
+
+.headline {
+    font-family: 'Fredoka One', cursive;
+    text-align: center;
+    font-size: 40px;
+}
+
+h3 {
+    font-family: 'Fredoka One', cursive;
+    text-align: center;
+}
+
+.catCopy {
+    font-family: 'Roboto Slab', serif;
+    font-size: 24px;
+}
+
+.featuredImage {
+    width: 300px;
+    border-radius: 10px;
+}
+
+.featuredCopy {
+    font-family: 'Roboto Slab', serif;
+    font-size: 24px;
+    width: 90%;
+    margin: auto;
+    padding-left: 10px;
+    margin-bottom: 10px;
+}
+
+.featuredFont {
+    font-family: 'Jolly Lodger', cursive;
+    font-size: 56px;
+    margin: 15px;
+    
+}
+
+.featuredText {
+    background-color: orange;
+    width: 99%;
+    margin: auto;
+    margin-top: 10px;
+    margin-bottom: 20px;
+    padding: 20px;
+    border-radius: 15px;
+}
+
+.moreInfo {
+    width: 99%;
+    margin: auto;
+    border: 2px solid white ;
+    border-radius: 15px;
+    margin-bottom: 50px;
+    padding: 20px;
+    text-align: center;
+}
+
+.fa-shopping-cart {
+    font-size: 24px !important;
+    text-align: right;
+    padding: 10px;
+    padding-right: 50px;
+    background: none;
+    color: black;
+}      
+
+a {
+    color: black !important;
+    text-decoration: none;
+}
+
+a:hover {
+    color: crimson;
+    text-decoration: none;
+}
+
+.nav-link:hover {
+    color: crimson !important;
+}
+
+.footer {
+    font-family: 'Roboto Slab', serif;
+    text-align: center;
+    font-size: 18px;
+    color: steelblue;
+}
+
+.product {
+    padding-top: 20px;
+    margin: 20px;
+    text-align: center;
+}
+
+.productImage {
+    border-radius: 10px;
+    width: 200px;
+}
+
+.card {
+    background-color: white;
+    border-radius: 10px;
+    padding-top: 10px;
+    margin-top: 20px;
+}
+/* div {
+    border: 1px solid red;
+} */

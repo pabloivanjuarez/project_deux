@@ -5,6 +5,14 @@ module.exports = function (app) {
     res.render("index");
   });
 
+  app.get("/about", function (req, res) {
+    res.render("about");
+  });
+
+  app.get("/contact", function (req, res) {
+    res.render("contact");
+  });
+
   app.post("/api/products", function (req, res) {
     db.Product.create(req.body).then(function (dbProduct) {
       res.json(dbProduct);

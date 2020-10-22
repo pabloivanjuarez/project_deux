@@ -10,7 +10,7 @@
 ---
   ## Table of Contents
   
-  * [Installation](#installastion)
+  * [Installation](#Installastion)
 
   * [Start Server](#start&nbsp;server)
 
@@ -51,7 +51,7 @@
 ---  
   ## Questions
   
-  If you have any questions about the project, open an issue or contact me directly through [email](mailto:weekdaypablo@gmail.com).
+  If you have any questions about the project, open an issue or contact us directly through [email](mailto:weekdaypablo@gmail.com).
 
   You can find more of our work on Git Hub: 
   [JackRyan](https://github.com/JackRyanSmith), [Matt](https://github.com/mx6), [Megan](https://github.com/mslee001), [Pablito](https://github.com/pabloivanjuarez).

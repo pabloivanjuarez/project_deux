@@ -33,6 +33,7 @@ body {
     margin-top: 10px;
     padding: 20px;
     border-radius: 15px;
+    border: 2px solid rgb(0, 0, 0, .3);
 }
 
 .headline {
@@ -54,6 +55,7 @@ h3 {
 .featuredImage {
     width: 300px;
     border-radius: 10px;
+    box-shadow: 2px 4px 10px yellow;
 }
 
 .featuredCopy {
@@ -67,6 +69,7 @@ h3 {
 
 .featuredFont {
     font-family: 'Jolly Lodger', cursive;
+    text-shadow: 2px 4px 4px yellow;
     font-size: 56px;
     margin: 15px;
     
@@ -80,6 +83,7 @@ h3 {
     margin-bottom: 20px;
     padding: 20px;
     border-radius: 15px;
+    border: 2px solid rgb(255, 69, 0, .5);
 }
 
 .moreInfo {

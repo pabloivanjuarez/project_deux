@@ -18,6 +18,7 @@ app.set("view engine", "handlebars");
 
 require("./controllers/product_controller.js")(app);
 require("./controllers/review_controller.js")(app);
+require("./controllers/cart_controller.js")(app);
 
 db.sequelize.sync({ force: true }).then(function() {
   app.listen(PORT, function() {

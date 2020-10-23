@@ -37,55 +37,71 @@
     </div>
 
     {{#if carts}}
-<div class="table-responsive">
-    <table class="table">
-        <thead class="thead-dark">
-            <tr>
-                <th scope="col" style="width:5%"></th>
-                <th scope="col" style="width:20%"></th>
-                <th scope="col" style="width:20%">Product</th>
-                <th scope="col" style="width:20%">Price</th>
-                <th scope="col" style="width:15%">QTY</th>
-                <th scope="col" style="width:20%">Remove from Cart</th>
-            </tr>
-        </thead>
-        <tbody>
-            {{#each carts}}
-            <tr>
-                <th scope="row"><a href="/products/{{Product.id}}" class="btn btn-primary" role="button">View</a></th>
-                <td><img class="img-thumbnail" src="{{Product.img}}" alt="{{Product.name}}"></td>
-                <td>{{Product.name}}</td>
-                <td>${{Product.price}}</td>
-                <td>                
-                    <form class="update-quantity" data-id={{Product.id}}>
-                        <div class="form-group">
-                            <select class="form-control">
-                                <option selected>{{quantity}}</option>
-                                <option>1</option>
-                                <option>2</option>
-                                <option>3</option>
-                                <option>4</option>
-                                <option>5</option>
-                            </select>
-                        </div>
-                        <button class="btn btn-default" type="submit" value="Submit">Update Quantity</button>
-                    </form>
-                </td>
-                <td>                
-                    <form class="delete-item" data-id={{Product.id}}>
-                        <div class="form-group">
-                            <button class="btn btn-danger" type="submit" value="Submit">Remove</button>
-                        </div>
-                    </form>
-                </td>
-            </tr>
-            {{/each}}
-        </tbody>
-    </table>
-</div>
-    
+    <div class="table-responsive">
+        <table class="table">
+            <thead class="thead-dark">
+                <tr>
+                    <th scope="col" style="width:5%"></th>
+                    <th scope="col" style="width:5%"></th>
+                    <th scope="col" style="width:20%"></th>
+                    <th scope="col" style="width:20%">Product</th>
+                    <th scope="col" style="width:20%">Price</th>
+                    <th scope="col" style="width:15%">QTY</th>
+                    <th scope="col" style="width:15%">Total</th>
+                </tr>
+            </thead>
+            <tbody>
+                {{#each carts}}
+                <tr>
+                    <th scope="row">
+                        <form class="delete-item" data-id={{Product.id}}>
+                            <div class="form-group">
+                                <button class="btn btn-danger" type="submit" value="Submit">Remove</button>
+                            </div>
+                        </form>
+                    </th>
+                    <td><a href="/products/{{Product.id}}" class="btn btn-primary" role="button">View</a></td>
+                    <td><img class="img-thumbnail" src="{{Product.img}}" alt="{{Product.name}}"></td>
+                    <td>{{Product.name}}</td>
+                    <td class="product-price">${{Product.price}}</td>
+                    <td>
+                        <form class="update-quantity" data-id={{Product.id}}>
+                            <div class="form-group">
+                                <select class="form-control" style="width:50%">
+                                    <option selected>{{quantity}}</option>
+                                    <option>1</option>
+                                    <option>2</option>
+                                    <option>3</option>
+                                    <option>4</option>
+                                    <option>5</option>
+                                    <option>6</option>
+                                </select>
+                            </div>
+                            <button class="btn btn-default" type="submit" value="Submit">Update QTY</button>
+                        </form>
+                    </td>
+                    <td class="item-price"></td>
+                </tr>
+                {{/each}}
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td>Grand Total: </td>
+                    <td class="grand-total"></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
     {{else}}
-        <p>There are no items in your cart.</p>
+    <div class="row">
+        <div class="col-md-12 d-flex justify-content-center">
+            <p>There are no items in your cart.</p>
+        </div>
+    </div>
     {{/if }}
 
     <div class="row">

@@ -1,25 +1,12 @@
 var db = require("../models");
 
 module.exports = function (app) {
-  app.get("/", function (req, res) {
-    res.render("index");
-  });
-
-  app.get("/about", function (req, res) {
-    res.render("about");
-  });
-
-  app.get("/contact", function (req, res) {
-    res.render("contact");
-  });
-
-  app.post("/api/products", function (req, res) {
     db.Product.create(req.body).then(function (dbProduct) {
       res.json(dbProduct);
     });
   });
 
-  app.get("/products", function (req, res) {
+  app.get("/products", (req, res) => {
     db.Product.findAll({}).then(function (data) {
       res.render("productList", {
         products: data
@@ -27,7 +14,7 @@ module.exports = function (app) {
     });
   })
 
-  app.get("/products/:id", function (req, res) {
+  app.get("/products/:id", (req, res) => {
     db.Product.findOne({
       where: {
         id: req.params.id

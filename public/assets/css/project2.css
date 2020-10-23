@@ -5,6 +5,8 @@
 
 body {
     background-image: linear-gradient( steelblue, lightskyblue, lightskyblue, yellowgreen);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
     
 }
 
@@ -137,7 +139,7 @@ a:hover {
 .productImage {
     border-radius: 10px;
     width: 200px;
-}
+} 
 
 .card {
     background-color: white;

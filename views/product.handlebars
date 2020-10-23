@@ -17,10 +17,10 @@
                 <a class="nav-link" href="/products">Products</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="#">About Us</a>
+                <a class="nav-link" href="/about/">About Us</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="#">Contact</a>
+                <a class="nav-link" href="/contact/">Contact</a>
             </li>
             <li class="shopping-cart-icon">
                 <a class="shopping-cart" href="/cart"><i class="fa fa-shopping-cart" aria-hidden="true"></i></a>
@@ -30,44 +30,75 @@
 </nav>
 {{!-- top nav bar end --}}
 
-<div class="product container-fluid">
-    <img class="productImage" src="{{products.img}}" />
+<div class="product container-fluid text-center">
+   <a class="example-image-link" href="{{products.img}}" data-lightbox="example-1" src="{{products.img}}" /> <img class="productImage" src="{{products.img}}" /></a>
     <p class="headline">{{products.name}}</h5>
     <p class="catCopy">{{products.description}}</p>
     <p class="catCopy">{{products.price}}</p>
-
 </div>
 
+
+<div class="container-fluid text-center">
+    <div>
+        <div class="row justify-content-center">
+            <div class="button dropdown">
+                <button class="button btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton"
+                    data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    QTY
+                </button>
+                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                    <a class="dropdown-item" href="#">1</a>
+                    <a class="dropdown-item" href="#">2</a>
+                    <a class="dropdown-item" href="#">3</a>
+                    <a class="dropdown-item" href="#">4</a>
+                    <a class="dropdown-item" href="#">5</a>
+                    <a class="dropdown-item" href="#">6</a>
+                </div>
+            </div>
+
+
+
+            <div class="button">
+                <button type="button" class="button btn btn-primary">Add to Cart</button> </div>
+        </div>
+    </div>
+</div>
+
+
+<br>
 <div class="row">
     <div class="col-md-6 offset-md-3">
         <h3>Reviews</h3>
         <hr>
         {{#each reviews}}
         <h3>{{title}}<h3>
-        <p class="catCopy">{{body}}</p>
-        <hr>
-        {{/each}}
-        </br></br>
-        <h5>Add Review</h5>
-        <form id="add-review">
-            <div class="form-group">
-                <label for="title">Title:</label>
-                <input placeholder="Review Title" type="text" class="form-control" id="title">
-                <br />
-                <label for="body">Body:</label>
-                <textarea placeholder="Review Body" class="form-control" rows="3" id="body"></textarea>
-                <div class="form-group">
-                </div>
-                <button type="submit" class="btn btn-primary submit">Submit</button>
-            </div>
-        </form>
+                <p class="catCopy">{{body}}</p>
+                <hr>
+                {{/each}}
+
+                </br></br>
+                <h5>Add Review</h5>
+                <form id="add-review">
+                    <div class="form-group">
+                        <label for="title">Title:</label>
+                        <input placeholder="Review Title" type="text" class="form-control" id="title">
+                        <br />
+                        <label for="body">Body:</label>
+                        <textarea placeholder="Review Body" class="form-control" rows="3" id="body"></textarea>
+                        <div class="form-group">
+                        </div>
+                        <button type="submit" class="btn btn-primary submit">Submit</button>
+                    </div>
+                </form>
     </div>
 </div>
 
 <footer>
-    <p class="footer">U of O Full-stack Boot Camp Project 2, October 2020 // all content copyright its respective owners // Copy Cat isn't a real service, please go to your nearest animal shelter to adopt a new furry family member</p> 
+    <p class="footer">U of O Full-stack Boot Camp Project 2, October 2020 // all content copyright its respective owners
+        // Copy Cat isn't a real service, please go to your nearest animal shelter to adopt a new furry family member
+    </p>
 </footer>
-
+<script src="//cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.1/js/lightbox-plus-jquery.min.js"></script>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
     integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"

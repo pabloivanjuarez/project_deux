@@ -1,7 +1,6 @@
 var db = require("../models");
 
 module.exports = function (app) {
-  app.post("/api/products", (req, res) => {
     db.Product.create(req.body).then(function (dbProduct) {
       res.json(dbProduct);
     });

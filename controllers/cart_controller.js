@@ -10,14 +10,19 @@ module.exports = function (app) {
     });
     });
   });
+
+  app.get("/api/cart", function (req, res) {
+    db.Cart.findAll({
+      include: [db.Product]
+    }).then(function (data) {
+      res.json(data);
+    });
+  });
   
-  app.post("/api/cart/:itemId", function (req, res) {
-      db.Cart.create({
-          ProductId: req.params.itemId,
-          quantity: req.body.quantity
-      }).then(function(addedItem) {
+  app.post("/api/cart/", function (req, res) {
+      db.Cart.create(req.body).then(function(addedItem) {
           res.json(addedItem);
-          res.redirect("/products");
+        //   res.redirect("/products");
       })
   });
 
@@ -29,8 +34,7 @@ module.exports = function (app) {
         include: [db.Product]
     }).then(function(cartItems) {
         res.json(cartItems);
-        res.redirect("/cart");
-    })
+    });
   });
 
   app.delete("/api/cart/:itemId", function(req, res) {
@@ -40,8 +44,7 @@ module.exports = function (app) {
           }
       }).then(function(data) {
           res.json(data);
-          res.redirect("/cart");
-      })
+      });
   });
 
 

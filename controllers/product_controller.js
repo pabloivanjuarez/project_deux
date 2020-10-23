@@ -1,6 +1,7 @@
 var db = require("../models");
 
 module.exports = function (app) {
+
   app.get("/products", (req, res) => {
     db.Product.findAll({}).then(function (data) {
       res.render("productList", {
@@ -28,4 +29,4 @@ module.exports = function (app) {
       });
     });
   })
-}
+};

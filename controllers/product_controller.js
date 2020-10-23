@@ -1,11 +1,6 @@
 var db = require("../models");
 
 module.exports = function (app) {
-    db.Product.create(req.body).then(function (dbProduct) {
-      res.json(dbProduct);
-    });
-  });
-
   app.get("/products", (req, res) => {
     db.Product.findAll({}).then(function (data) {
       res.render("productList", {

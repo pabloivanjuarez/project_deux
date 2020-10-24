@@ -48,6 +48,7 @@ $(function () {
         var newReview = {
             title: $("#title").val().trim(),
             body: $("#body").val().trim(),
+            name: $("#name").val().trim(),
             ProductId: id
         };
         // Send the POST request.

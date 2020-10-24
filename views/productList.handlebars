@@ -80,9 +80,6 @@
             <th>Description</th>
             <th>Image</th>
             <th>price</th>
-            <th>createdAt</th>
-            <th>updatedAt</th>
-            <th data-class-name="priority">reviews</th>
         </tr>
     </thead>
 
@@ -92,10 +89,8 @@
         <tr>
             <td>{{name}}</td>
             <td>{{short_description}}</td>
-            <td>{{img}}</td>
-            <td>{{price}}</td>
-            <td>{{createdAt}}</td>
-            <td>{{updatedAt}}</td>
+            <td><img src="{{img}}"></td>
+            <td>${{price}}</td>
         </tr>
         {{/each}}
 

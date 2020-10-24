@@ -27,9 +27,7 @@ require("./controllers/review_controller.js")(app);
 require("./controllers/cart_controller.js")(app);
 require("./controllers/main_controller")(app);
 
-db.sequelize.sync({
-  force: true
-}).then(function () {
+db.sequelize.sync({}).then(function () {
   app.listen(PORT, function () {
     console.log("App listening on PORT " + PORT);
   });

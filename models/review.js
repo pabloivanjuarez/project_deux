@@ -10,7 +10,16 @@ module.exports = function(sequelize, DataTypes) {
         body: {
             type: DataTypes.TEXT,
             allowNull: false,
-            len: [1]
+            validate: {
+                len: [1]
+            }
+        },
+        name: {
+            type: DataTypes.STRING,
+            allowNull: false,
+            validate: {
+                len: [1]
+            }
         }
     });
 

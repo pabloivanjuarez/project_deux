@@ -30,17 +30,21 @@
 </nav>
 {{!-- top nav bar end --}}
 
-<div class="product container-fluid text-center">
-    <a class="example-image-link" href="{{products.img}}" data-lightbox="example-1" src="{{products.img}}" /> <img
-        class="productImage" src="{{products.img}}" /></a>
-    <p class="headline">{{products.name}}</h5>
-    <p class="catCopy">{{products.description}}</p>
-    <p class="catCopy">{{products.price}}</p>
+<div class="m-1">
+    <a href="/products">Back to Products</a>
 </div>
 
-<div class="container-fluid">
-    <form class="text-center add-cart" data-id={{products.id}}>
-        <div class="row justify-content-center">
+<div class="product container">
+    <a class="example-image-link m-5" href="{{products.img}}" data-lightbox="example-1" src="{{products.img}}" /> <img
+        class="productImage" src="{{products.img}}" /></a>
+    <p class="headline">{{products.name}}</h5>
+    <p class="catCopy">${{products.price}}.00</p>
+    <p class="catCopy">{{products.long_description}}</p>
+</div>
+
+<div class="container">
+    <form class="text-center add-cart form-inline justify-content-center" data-id={{products.id}}>
+        <div class="row">
             <div class="form-group">
                 <select class="form-control" id="select-qty">
                     <option selected>Choose QTY</option>
@@ -57,6 +61,7 @@
             </div>
             </div>
     </form>
+    <hr>
 </div>
 
 
@@ -64,17 +69,49 @@
 <div class="row">
     <div class="col-md-6 offset-md-3">
         <h3>Reviews</h3>
-        <hr>
-        {{#each reviews}}
-        <h3>{{title}}<h3>
+        {{#if reviews}}
+
+            <div class="table-responsive">
+                <table class="table">
+                    <thead class="thead-dark">
+                        <tr>
+                            <th scope="col" style="width:30%">Date</th>
+                            <th scope="col">Reviewer</th>
+                            <th scope="col">Review</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {{#each reviews}}
+                        <tr>
+                            <th scope="row">
+                                <p>{{createdAt}}</p>
+                            </th>
+                            <td>
+                                <p>{{name}}</p>
+                            </td>
+                            <td>
+                                <h5>{{title}}</h5>
+                                <p>{{body}}</p>
+                            </td>
+                        </tr>
+                    </tbody>
+                {{!-- <h3>{{title}}<h3>
                 <p class="catCopy">{{body}}</p>
-                <hr>
+                <hr> --}}
                 {{/each}}
+                </table>
+                </div>
+        {{else}}
+        <p>There are no reviews yet</p>
+        {{/if}}
 
                 </br></br>
                 <h5>Add Review</h5>
                 <form id="add-review">
                     <div class="form-group">
+                        <label for="name">Name:</label>
+                        <input placeholder="Review's Name" type="text" class="form-control" id="name">
+                        <br />
                         <label for="title">Title:</label>
                         <input placeholder="Review Title" type="text" class="form-control" id="title">
                         <br />

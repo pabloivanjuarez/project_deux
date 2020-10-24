@@ -63,11 +63,11 @@
                     <td><a href="/products/{{Product.id}}" class="btn btn-primary" role="button">View</a></td>
                     <td><img class="img-thumbnail" src="{{Product.img}}" alt="{{Product.name}}"></td>
                     <td>{{Product.name}}</td>
-                    <td class="product-price">${{Product.price}}</td>
+                    <td class="product-price" data-price={{Product.price}}>${{Product.price}}</td>
                     <td>
                         <form class="update-quantity" data-id={{Product.id}}>
                             <div class="form-group">
-                                <select class="form-control" style="width:50%">
+                                <select class="form-control itemQty" style="width:50%">
                                     <option selected>{{quantity}}</option>
                                     <option>1</option>
                                     <option>2</option>

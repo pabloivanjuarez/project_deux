@@ -51,6 +51,7 @@
         <h5>Add Review</h5>
         <form id="add-review">
             <div class="form-group">
+                <input type="text" value="{{productId}}" id="review" hidden>
                 <label for="title">Title:</label>
                 <input placeholder="Review Title" type="text" class="form-control" id="title">
                 <br />
@@ -58,7 +59,7 @@
                 <textarea placeholder="Review Body" class="form-control" rows="3" id="body"></textarea>
                 <div class="form-group">
                 </div>
-                <button type="submit" class="btn btn-primary submit">Submit</button>
+                <button type="submit" class="btn btn-primary submit review">Submit</button>
             </div>
         </form>
     </div>

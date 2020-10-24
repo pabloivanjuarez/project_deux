@@ -16,22 +16,29 @@ module.exports = function (app) {
   })
 
   app.get("/products/:id", (req, res) => {
-    db.Product.findOne({
+    //var product;
+     db.Product.findOne({
       where: {
-        id: req.params.id
+        id: parseInt(req.params.id) 
       }
     }).then(function (dbProduct) {
-      db.Review.findAll({
-        where: {
-          productId: req.params.id
-        },
-        include: [db.Product]
-      }).then(function (data) {
-        res.render("product", {
-          products: dbProduct,
-          reviews: data
-        });
+     //product=dbProduct 
+     //console.log(product)
+     db.Review.findAll({
+      where: {
+        productId: parseInt(req.params.id)
+      }
+      
+    }).then(function (data) {
+      //console.log(data)
+      res.render("product", {
+        products: dbProduct,
+        reviews: data,
+        productId: req.params.id
       });
     });
+    });
+   
+   
   })
 }

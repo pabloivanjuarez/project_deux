@@ -70,6 +70,34 @@
 {{/each}}
 </div>
 {{!-- cat cards --}}
+<table id="table_id" data-order='[[ 1, "asc" ]]' data-page-length='25'>
+    <thead>
+        <tr>
+            <th>Name</th>
+            <th>Description</th>
+            <th>Image</th>
+            <th>price</th>
+            <th>createdAt</th>
+            <th>updatedAt</th>
+            <th data-class-name="priority">reviews</th>
+        </tr>
+    </thead>
+ 
+    <tbody>
+        {{#each products}}
+
+        <tr>
+            <td>{{name}}</td>
+            <td>{{description}}</td>
+            <td>{{img}}</td>
+            <td>{{price}}</td>
+            <td>{{createdAt}}</td>
+            <td>{{updatedAt}}</td>
+        </tr>
+        {{/each}}
+
+    </tbody>
+</table>
 
 <footer>
     <p class="footer">U of O Full-stack Boot Camp Project 2, October 2020 // all content copyright its respective owners // Copy Cat isn't a real service, please go to your nearest animal shelter to adopt a new furry family member</p> 

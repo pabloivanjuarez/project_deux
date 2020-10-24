@@ -50,36 +50,16 @@
 
 {{!-- about copy cats container end  --}}
 
-{{!-- cat cards  --}}
-<div class="container-fluid">
-    {{#each products}}
-    <div class="card mb-3" style="max-width: 540px;">
-
-        <div class="row no-gutters">
-            <div class="col-md-4">
-                <img src="{{img}}" class="card-img" alt="cat thumbnail">
-            </div>
-            <div class="col-md-8">
-                <div class="card-body">
-                    <h5 class="card-title"><a href="/products/{{id}}">{{name}}</a></h5>
-                    <p class="card-text">{{short_description}}</p>
-                    <p class="card-text">{{price}}</p>
-                </div>
-            </div>
-        </div>
-
-    </div>
-</div>
-{{/each}}
-</div>
 {{!-- cat cards --}}
-<table id="table_id" data-order='[[ 1, "asc" ]]' data-page-length='25'>
+<div class="container justify-content-center">
+
+
+<table class="table" id="table_id" data-order='[[ 1, "asc" ]]' data-page-length='25'>
     <thead>
         <tr>
-            <th>Name</th>
-            <th>Description</th>
-            <th>Image</th>
-            <th>price</th>
+            <th scope="col">Image</th>
+            <th scope="col">Name</th>
+            <th scope="col">Price</th>
         </tr>
     </thead>
 
@@ -87,15 +67,18 @@
         {{#each products}}
 
         <tr>
-            <td>{{name}}</td>
-            <td>{{short_description}}</td>
-            <td><img src="{{img}}"></td>
+            <td><a href="/products/{{id}}"><img src="{{img}}" alt="cat thumbnail" style="width: 200px"></a></td>
+            <td>
+                <h5><a href="/products/{{id}}">{{name}}</a></h5>
+                <p>{{short_description}}</p>
+            </td>
             <td>${{price}}</td>
         </tr>
         {{/each}}
 
     </tbody>
 </table>
+</div>
 
 <footer>
     <p class="footer">U of O Full-stack Boot Camp Project 2, October 2020 // all content copyright its respective owners

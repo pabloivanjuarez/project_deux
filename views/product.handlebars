@@ -30,21 +30,21 @@
 </nav>
 {{!-- top nav bar end --}}
 
-<div>
+<div class="m-1">
     <a href="/products">Back to Products</a>
 </div>
 
 <div class="product container">
-    <a class="example-image-link float-left m-5 w" href="{{products.img}}" data-lightbox="example-1" src="{{products.img}}" /> <img
+    <a class="example-image-link float-left m-5" href="{{products.img}}" data-lightbox="example-1" src="{{products.img}}" /> <img
         class="productImage" src="{{products.img}}" /></a>
     <p class="headline">{{products.name}}</h5>
     <p class="catCopy">${{products.price}}.00</p>
-    <p class="catCopy">{{products.description}}</p>
+    <p class="catCopy">{{products.long_description}}</p>
 </div>
 
 <div class="container">
-    <form class="text-center add-cart form-inline" data-id={{products.id}}>
-        <div class="row justify-content-center">
+    <form class="text-center add-cart form-inline justify-content-center" data-id={{products.id}}>
+        <div class="row">
             <div class="form-group">
                 <select class="form-control" id="select-qty">
                     <option selected>Choose QTY</option>

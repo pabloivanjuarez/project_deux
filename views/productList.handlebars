@@ -17,10 +17,10 @@
                 <a class="nav-link" href="/products">Products</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="./about">About Us</a>
+                <a class="nav-link" href="#">About Us</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="./contact">Contact</a>
+                <a class="nav-link" href="#">Contact</a>
             </li>
             <li class="shopping-cart-icon">
                 <a class="shopping-cart" href="/cart"><i class="fa fa-shopping-cart" aria-hidden="true"></i></a>
@@ -35,12 +35,15 @@
     <div class="row justify-content-center h-100 aboutText">
         <div class="col-sm-12 col-md-12 col-lg-12">
             <p class="headline">
-                Copy Cats duplicates kittens of all shapes and sizes. </p> 
-                
-                <p class="catCopy">Please review the different kittens we have to offer.  All of our kitties have been vaccinated, chipped, and box-trained and are ready to be shipped to your door.  All of our little fur babies will be pre-programmed with name recognition and common commands.  Please specify the kitten's name and language at checkout.  Toilet training and bilingual kittens are available.
+                Copy Cats duplicates kittens of all shapes and sizes. </p>
+
+            <p class="catCopy">Please review the different kittens we have to offer. All of our kitties have been
+                vaccinated, chipped, and box-trained and are ready to be shipped to your door. All of our little fur
+                babies will be pre-programmed with name recognition and common commands. Please specify the kitten's
+                name and language at checkout. Toilet training and bilingual kittens are available.
 
             </p>
-          
+
         </div>
     </div>
 </div>
@@ -59,20 +62,50 @@
             <div class="col-md-8">
                 <div class="card-body">
                     <h5 class="card-title"><a href="/products/{{id}}">{{name}}</a></h5>
-                    <p class="card-text">{{short_description}}</p>
+                    <p class="card-text">{{description}}</p>
                     <p class="card-text">{{price}}</p>
                 </div>
             </div>
         </div>
-        
+
     </div>
+</div>
 {{/each}}
 </div>
-
 {{!-- cat cards --}}
+<table id="table_id" data-order='[[ 1, "asc" ]]' data-page-length='25'>
+    <thead>
+        <tr>
+            <th>Name</th>
+            <th>Description</th>
+            <th>Image</th>
+            <th>price</th>
+            <th>createdAt</th>
+            <th>updatedAt</th>
+            <th data-class-name="priority">reviews</th>
+        </tr>
+    </thead>
+
+    <tbody>
+        {{#each products}}
+
+        <tr>
+            <td>{{name}}</td>
+            <td>{{description}}</td>
+            <td>{{img}}</td>
+            <td>{{price}}</td>
+            <td>{{createdAt}}</td>
+            <td>{{updatedAt}}</td>
+        </tr>
+        {{/each}}
+
+    </tbody>
+</table>
 
 <footer>
-    <p class="footer">U of O Full-stack Boot Camp Project 2, October 2020 // all content copyright its respective owners // Copy Cat isn't a real service, please go to your nearest animal shelter to adopt a new furry family member</p> 
+    <p class="footer">U of O Full-stack Boot Camp Project 2, October 2020 // all content copyright its respective owners
+        // Copy Cat isn't a real service, please go to your nearest animal shelter to adopt a new furry family member
+    </p>
 </footer>
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js" crossorigin="anonymous"></script>

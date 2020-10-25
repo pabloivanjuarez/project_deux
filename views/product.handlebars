@@ -35,17 +35,31 @@
 </div>
 
 <div class="product container">
-  <a class="example-image-link m-5" href="{{products.img}}" data-lightbox="example-1" src="{{products.img}}" /> <img
-    class="productImage" src="{{products.img}}" /></a>
-  <p class="headline">{{products.name}}</h5>
-  <p class="catCopy">${{products.price}}.00</p>
-  <p class="catCopy">{{products.long_description}}</p>
+  <div class="row">
+    <div class="col-md-12">
+      <a class="example-image-link m-5" href="{{products.img}}" data-lightbox="example-1" src="{{products.img}}" /> 
+      <img class="productImage" src="{{products.img}}" /></a>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-12">
+      <p class="headline">{{products.name}}</p>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-12">
+      <p class="catCopy">${{products.price}}.00</p>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-12">
+      <p class="catCopy">{{products.long_description}}</p>
+  </div>
 </div>
 
-<div class="container">
   <form class="text-center add-cart form-inline justify-content-center" data-id={{products.id}}>
     <div class="row">
-      <div class="form-group">
+      <div class="form-group col-md-12">
         <select class="form-control" id="select-qty">
           <option selected>Choose QTY</option>
           <option>1</option>
@@ -64,11 +78,18 @@
   <hr>
 </div>
 
-
-<br>
-<div class="row">
-  <div class="col-md-6 offset-md-3">
-    <h3>Reviews</h3>
+</br>
+<div class="container">
+  <div class="row">
+    <div class="col-md-2"></div>
+    <div class="col-md-8">
+      <h3>Reviews</h3>
+    </div>
+    <div class="col-md-2"></div>
+  </div>
+  <div class="row">
+    <div class="col-md-2"></div>
+    <div class="col-md-8">
     {{#if reviews}}
 
     <div class="table-responsive">
@@ -101,26 +122,43 @@
     {{else}}
     <p>There are no reviews yet</p>
     {{/if}}
-
-    </br></br>
-    <h5>Add a Review</h5>
-    <form id="add-review">
-      <div class="form-group">
-        <label for="name">Name:</label>
-        <input placeholder="What should we call you?" type="text" class="form-control" id="name">
-        <br />
-        <label for="title">Title:</label>
-        <input placeholder="What's most important to know?" type="text" class="form-control" id="title">
-        <br />
-        <label for="body">Body:</label>
-        <textarea placeholder="What did you like or dislike?" class="form-control" rows="3" id="body"></textarea>
-        <div class="form-group">
-        </div>
-        <button type="submit" class="btn btn-primary submit">Submit</button>
-      </div>
-    </form>
+    </div>
+    <div class="col-md-2"></div>
   </div>
 </div>
+
+</br></br>
+<div class="container">
+  <div class="row">
+    <div class="col-md-3"></div>
+    <div class="col-md-6 text-center">
+      <h5>Add a Review</h5>
+    </div>
+    <div class="col-md-3"></div>
+  </div>
+  <div class="row">
+    <div class="col-md-3"></div>
+    <div class="col-md-6">
+      <form id="add-review">
+        <div class="form-group">
+          <label for="name">Name:</label>
+          <input placeholder="What should we call you?" type="text" class="form-control" id="name">
+          <br />
+          <label for="title">Title:</label>
+          <input placeholder="What's most important to know?" type="text" class="form-control" id="title">
+          <br />
+          <label for="body">Body:</label>
+          <textarea placeholder="What did you like or dislike?" class="form-control" rows="3" id="body"></textarea>
+          <div class="form-group">
+          </div>
+          <button type="submit" class="btn btn-primary submit">Submit</button>
+        </div>
+      </form>
+    </div>
+    <div class="col-md-3"></div>
+  </div>
+</div>
+
 
 <footer>
   <p class="footer">U of O Full-stack Boot Camp Project 2, October 2020 // all content copyright its respective owners

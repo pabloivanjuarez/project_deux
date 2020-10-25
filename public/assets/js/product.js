@@ -6,6 +6,7 @@ $(document).ready(function () {
 
         let itemQuantity = parseInt($("#select-qty").val());
 
+        //checks to make sure a Qty has been selected
         if (Number.isInteger(itemQuantity)) {
 
             let addCart = {
@@ -15,6 +16,7 @@ $(document).ready(function () {
 
             console.log(itemQuantity);
 
+            //sends the product to the carts table in the database
             $.ajax("/api/cart", {
                 type: "POST",
                 data: addCart
@@ -23,6 +25,7 @@ $(document).ready(function () {
                 location.reload();
             });
         } else
+        // if no Qty is selected, an error message will display
             {
             var qtyError = $("<p>");
             qtyError.css({"color": "red"});
@@ -43,22 +46,26 @@ $(function () {
     $("#add-review").on("submit", function (event) {
         // Make sure to preventDefault on a submit event.
         event.preventDefault();
+
+        //variables to get the ProductID
         var url = window.location.pathname;
         var id = url.substring(url.lastIndexOf('/') + 1);
+
+        //request that gets sent
         var newReview = {
             title: $("#title").val().trim(),
             body: $("#body").val().trim(),
             name: $("#name").val().trim(),
             ProductId: id
         };
-        // Send the POST request.
+        // Send the POST request to the reviews table in the database
         $.ajax("/api/reviews", {
             type: "POST",
             data: newReview
         }).then(
             function () {
                 console.log("created new review");
-                // Reload the page to get the updated list
+                // Reload the page to get the updated reviews
                 location.reload();
             }
         );

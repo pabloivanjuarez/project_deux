@@ -59,9 +59,7 @@
                 <tr>
                     <th scope="row">
                         <form class="delete-item" data-id={{Product.id}}>
-                            <div class="form-group">
-                                <button class="btn btn-danger" type="submit" value="Submit">Remove</button>
-                            </div>
+                            <button class="btn btn-danger" type="submit" value="Submit">Remove</button>
                         </form>
                     </th>
                     <td><a href="/products/{{Product.id}}" class="btn btn-primary" role="button">View</a></td>
@@ -81,7 +79,7 @@
                                     <option>6</option>
                                 </select>
                             </div>
-                            <button class="btn btn-default" type="submit" value="Submit">Update QTY</button>
+                                <button class="btn btn-secondary btn-sm float-left" type="submit" value="Submit">Update QTY</button>
                         </form>
                     </td>
                     <td class="item-price"></td>

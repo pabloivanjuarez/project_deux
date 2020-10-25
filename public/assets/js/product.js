@@ -1,5 +1,6 @@
 $(document).ready(function () {
 
+    //submit event when the product is added to the cart
     $(".add-cart").on("submit", function (event) {
         event.preventDefault();
 
@@ -22,17 +23,16 @@ $(document).ready(function () {
                 location.reload();
             });
         } else
-
+            {
             var qtyError = $("<p>");
-        qtyError.css({
-            "color": "red"
-        });
-        qtyError.text("Please select a QTY");
-        $("#select-qty").parent().append(qtyError);
-        setTimeout(function () {
-            qtyError.remove();
-        }, 2000);
-        return;
+            qtyError.css({"color": "red"});
+            qtyError.text("Please select a QTY");
+            $("#select-qty").parent().append(qtyError);
+            setTimeout(function () {
+                qtyError.remove();
+                }, 2000);
+                return;
+            }
 
     });
 

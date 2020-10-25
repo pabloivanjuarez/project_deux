@@ -1,141 +1,138 @@
 {{!-- top nav bar start --}}
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
 
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
-        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="navbarNav">
-        <ul class="navbar-nav ml-auto">
-            <li class="nav-item active">
-                <a class="nav-link" href="../">Home <span class="sr-only">(current)</span></a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="/products/3">Featured</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="/products">Products</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="/about/">About Us</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="/contact/">Contact</a>
-            </li>
-            <li class="shopping-cart-icon">
-                <a class="shopping-cart" href="/cart"><i class="fa fa-shopping-cart" aria-hidden="true"></i></a>
-            </li>
-        </ul>
-    </div>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav"
+    aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarNav">
+    <ul class="navbar-nav ml-auto">
+      <li class="nav-item active">
+        <a class="nav-link" href="../">Home <span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="/products/3">Featured</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="/products">Products</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="/about/">About Us</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="/contact/">Contact</a>
+      </li>
+      <li class="shopping-cart-icon">
+        <a class="shopping-cart" href="/cart"><i class="fa fa-shopping-cart" aria-hidden="true"></i></a>
+      </li>
+    </ul>
+  </div>
 </nav>
 {{!-- top nav bar end --}}
 
 <div class="m-1">
-    <a href="/products">Back to Products</a>
+  <a href="/products">Back to Products</a>
 </div>
 
 <div class="product container">
-    <a class="example-image-link m-5" href="{{products.img}}" data-lightbox="example-1" src="{{products.img}}" /> <img
-        class="productImage" src="{{products.img}}" /></a>
-    <p class="headline">{{products.name}}</h5>
-    <p class="catCopy">${{products.price}}.00</p>
-    <p class="catCopy">{{products.long_description}}</p>
+  <a class="example-image-link m-5" href="{{products.img}}" data-lightbox="example-1" src="{{products.img}}" /> <img
+    class="productImage" src="{{products.img}}" /></a>
+  <p class="headline">{{products.name}}</h5>
+  <p class="catCopy">${{products.price}}.00</p>
+  <p class="catCopy">{{products.long_description}}</p>
 </div>
 
 <div class="container">
-    <form class="text-center add-cart form-inline justify-content-center" data-id={{products.id}}>
-        <div class="row">
-            <div class="form-group">
-                <select class="form-control" id="select-qty">
-                    <option selected>Choose QTY</option>
-                    <option>1</option>
-                    <option>2</option>
-                    <option>3</option>
-                    <option>4</option>
-                    <option>5</option>
-                </select>
+  <form class="text-center add-cart form-inline justify-content-center" data-id={{products.id}}>
+    <div class="row">
+      <div class="form-group">
+        <select class="form-control" id="select-qty">
+          <option selected>Choose QTY</option>
+          <option>1</option>
+          <option>2</option>
+          <option>3</option>
+          <option>4</option>
+          <option>5</option>
+        </select>
 
-                <div class="button">
-                    <button type="submit" class="button btn btn-primary" value="Submit">Add to Cart</button>
-                </div>
-            </div>
+        <div class="button">
+          <button type="submit" class="button btn btn-primary" value="Submit">Add to Cart</button>
         </div>
-    </form>
-    <hr>
+      </div>
+    </div>
+  </form>
+  <hr>
 </div>
 
 
 <br>
 <div class="row">
-    <div class="col-md-6 offset-md-3">
-        <h3>Reviews</h3>
-        {{#if reviews}}
+  <div class="col-md-6 offset-md-3">
+    <h3>Reviews</h3>
+    {{#if reviews}}
 
-        <div class="table-responsive">
-            <table class="table">
-                <thead class="thead-dark">
-                    <tr>
-                        <th scope="col" style="width:30%">Date</th>
-                        <th scope="col">Reviewer</th>
-                        <th scope="col">Review</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    {{#each reviews}}
-                    <tr>
-                        <th scope="row">
-                            <p>{{createdAt}}</p>
-                        </th>
-                        <td>
-                            <p>{{name}}</p>
-                        </td>
-                        <td>
-                            <h5>{{title}}</h5>
-                            <p>{{body}}</p>
-                        </td>
-                    </tr>
-                </tbody>
-                {{/each}}
-            </table>
-        </div>
-        {{else}}
-        <p>There are no reviews yet</p>
-        {{/if}}
-
-        </br></br>
-        <h5>Add Review</h5>
-        <form id="add-review">
-            <div class="form-group">
-                <label for="name">Name:</label>
-                <input placeholder="Review's Name" type="text" class="form-control" id="name">
-                <br />
-                <label for="title">Title:</label>
-                <input placeholder="Review Title" type="text" class="form-control" id="title">
-                <br />
-                <label for="body">Body:</label>
-                <textarea placeholder="Review Body" class="form-control" rows="3" id="body"></textarea>
-                <div class="form-group">
-                </div>
-                <button type="submit" class="btn btn-primary submit">Submit</button>
-            </div>
-        </form>
+    <div class="table-responsive">
+      <table class="table">
+        <thead class="thead-dark">
+          <tr>
+            <th scope="col" style="width:30%">Date</th>
+            <th scope="col">Reviewer</th>
+            <th scope="col">Review</th>
+          </tr>
+        </thead>
+        <tbody>
+          {{#each reviews}}
+          <tr>
+            <th scope="row">
+              <p>{{createdAt}}</p>
+            </th>
+            <td>
+              <p>{{name}}</p>
+            </td>
+            <td>
+              <h5>{{title}}</h5>
+              <p>{{body}}</p>
+            </td>
+          </tr>
+        </tbody>
+        {{/each}}
+      </table>
     </div>
+    {{else}}
+    <p>There are no reviews yet</p>
+    {{/if}}
+
+    </br></br>
+    <h5>Add a Review</h5>
+    <form id="add-review">
+      <div class="form-group">
+        <label for="name">Name:</label>
+        <input placeholder="What should we call you?" type="text" class="form-control" id="name">
+        <br />
+        <label for="title">Title:</label>
+        <input placeholder="What's most important to know?" type="text" class="form-control" id="title">
+        <br />
+        <label for="body">Body:</label>
+        <textarea placeholder="What did you like or dislike?" class="form-control" rows="3" id="body"></textarea>
+        <div class="form-group">
+        </div>
+        <button type="submit" class="btn btn-primary submit">Submit</button>
+      </div>
+    </form>
+  </div>
 </div>
 
 <footer>
-    <p class="footer">U of O Full-stack Boot Camp Project 2, October 2020 // all content copyright its respective owners
-        // Copy Cat isn't a real service, please go to your nearest animal shelter to adopt a new furry family member
-    </p>
+  <p class="footer">U of O Full-stack Boot Camp Project 2, October 2020 // all content copyright its respective owners
+    // Copy Cat isn't a real service, please go to your nearest animal shelter to adopt a new furry family member
+  </p>
 </footer>
 <script src="/assets/js/product.js"></script>
 <script src="//cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.1/js/lightbox-plus-jquery.min.js"></script>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
-    integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
-    crossorigin="anonymous"></script>
+  integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
-    integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
-    crossorigin="anonymous"></script>
+  integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
-    integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
-    crossorigin="anonymous"></script>
+  integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>

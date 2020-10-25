@@ -30,10 +30,12 @@
 </nav>
 {{!-- top nav bar end --}}
 
+{{!-- Link to go back to the product list --}}
 <div class="m-1">
   <a href="/products">Back to Products</a>
 </div>
 
+{{!-- Displays product information --}}
 <div class="product container">
   <div class="row">
     <div class="col-md-12">
@@ -57,6 +59,7 @@
   </div>
 </div>
 
+{{!-- Form to select a qty and add the product to the shopping cart --}}
   <form class="text-center add-cart form-inline justify-content-center" data-id={{products.id}}>
     <div class="row">
       <div class="form-group col-md-12">
@@ -79,6 +82,7 @@
 </div>
 
 </br>
+{{!-- reviews start here --}}
 <div class="container">
   <div class="row">
     <div class="col-md-2"></div>
@@ -90,6 +94,8 @@
   <div class="row">
     <div class="col-md-2"></div>
     <div class="col-md-8">
+
+    {{!-- if reviews are present in the reviews table in the database, they will show up below --}}
     {{#if reviews}}
 
     <div class="table-responsive">
@@ -119,6 +125,8 @@
         {{/each}}
       </table>
     </div>
+
+    {{!-- If no reviews, the message below will display --}}
     {{else}}
     <p>There are no reviews yet</p>
     {{/if}}
@@ -128,6 +136,7 @@
 </div>
 
 </br></br>
+{{!-- This is a form for users/customers to add a new review for this product --}}
 <div class="container">
   <div class="row">
     <div class="col-md-3"></div>
@@ -159,7 +168,7 @@
   </div>
 </div>
 
-
+{{!-- footer --}}
 <footer>
   <p class="footer">U of O Full-stack Boot Camp Project 2, October 2020 // all content copyright its respective owners
     // Copy Cat isn't a real service, please go to your nearest animal shelter to adopt a new furry family member

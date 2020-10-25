@@ -54,12 +54,12 @@
                     <option>4</option>
                     <option>5</option>
                 </select>
-            
-            <div class="button">
-                <button type="submit" class="button btn btn-primary" value="Submit">Add to Cart</button>
+
+                <div class="button">
+                    <button type="submit" class="button btn btn-primary" value="Submit">Add to Cart</button>
+                </div>
             </div>
-            </div>
-            </div>
+        </div>
     </form>
     <hr>
 </div>
@@ -71,57 +71,54 @@
         <h3>Reviews</h3>
         {{#if reviews}}
 
-            <div class="table-responsive">
-                <table class="table">
-                    <thead class="thead-dark">
-                        <tr>
-                            <th scope="col" style="width:30%">Date</th>
-                            <th scope="col">Reviewer</th>
-                            <th scope="col">Review</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        {{#each reviews}}
-                        <tr>
-                            <th scope="row">
-                                <p>{{createdAt}}</p>
-                            </th>
-                            <td>
-                                <p>{{name}}</p>
-                            </td>
-                            <td>
-                                <h5>{{title}}</h5>
-                                <p>{{body}}</p>
-                            </td>
-                        </tr>
-                    </tbody>
-                {{!-- <h3>{{title}}<h3>
-                <p class="catCopy">{{body}}</p>
-                <hr> --}}
+        <div class="table-responsive">
+            <table class="table">
+                <thead class="thead-dark">
+                    <tr>
+                        <th scope="col" style="width:30%">Date</th>
+                        <th scope="col">Reviewer</th>
+                        <th scope="col">Review</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {{#each reviews}}
+                    <tr>
+                        <th scope="row">
+                            <p>{{createdAt}}</p>
+                        </th>
+                        <td>
+                            <p>{{name}}</p>
+                        </td>
+                        <td>
+                            <h5>{{title}}</h5>
+                            <p>{{body}}</p>
+                        </td>
+                    </tr>
+                </tbody>
                 {{/each}}
-                </table>
-                </div>
+            </table>
+        </div>
         {{else}}
         <p>There are no reviews yet</p>
         {{/if}}
 
-                </br></br>
-                <h5>Add Review</h5>
-                <form id="add-review">
-                    <div class="form-group">
-                        <label for="name">Name:</label>
-                        <input placeholder="Review's Name" type="text" class="form-control" id="name">
-                        <br />
-                        <label for="title">Title:</label>
-                        <input placeholder="Review Title" type="text" class="form-control" id="title">
-                        <br />
-                        <label for="body">Body:</label>
-                        <textarea placeholder="Review Body" class="form-control" rows="3" id="body"></textarea>
-                        <div class="form-group">
-                        </div>
-                        <button type="submit" class="btn btn-primary submit">Submit</button>
-                    </div>
-                </form>
+        </br></br>
+        <h5>Add Review</h5>
+        <form id="add-review">
+            <div class="form-group">
+                <label for="name">Name:</label>
+                <input placeholder="Review's Name" type="text" class="form-control" id="name">
+                <br />
+                <label for="title">Title:</label>
+                <input placeholder="Review Title" type="text" class="form-control" id="title">
+                <br />
+                <label for="body">Body:</label>
+                <textarea placeholder="Review Body" class="form-control" rows="3" id="body"></textarea>
+                <div class="form-group">
+                </div>
+                <button type="submit" class="btn btn-primary submit">Submit</button>
+            </div>
+        </form>
     </div>
 </div>
 

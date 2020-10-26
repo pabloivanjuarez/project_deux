@@ -1,39 +1,8 @@
-{{!-- top nav bar start --}}
-<nav class="navbar navbar-expand-lg navbar-light bg-light">
-
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
-        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="navbarNav">
-        <ul class="navbar-nav ml-auto">
-            <li class="nav-item active">
-                <a class="nav-link" href="../">Home <span class="sr-only">(current)</span></a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="/products/3">Featured</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="/products">Products</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="/about">About Us</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="/contact">Contact</a>
-            </li>
-            <li class="shopping-cart-icon">
-                <a class="shopping-cart" href="#"><i class="fa fa-shopping-cart" aria-hidden="true"></i></a>
-            </li>
-        </ul>
-    </div>
-</nav>
-
 {{!-- Beginning of shopping cart --}}
 <div class="container-fluid">
     <div class="row">
         <div class="col-md-12">
-            <h2 class="text-center">Shopping Cart</h2>
+            <h2 class="text-center m-2">Shopping Cart</h2>
         </div>
     </div>
 
@@ -110,7 +79,7 @@
     {{/if }}
 
     <div class="row">
-        <div class="col-md-12 d-flex justify-content-center">
+        <div class="col-md-12 d-flex justify-content-center mb-3">
             {{#if carts}}
             <a href="#" class="btn btn-primary">Checkout</a>
             {{else}}
@@ -119,11 +88,5 @@
         </div>
     </div>
 </div>
-<footer>
-    </br>
-    <p class="footer">U of O Full-stack Boot Camp Project 2, October 2020 // all content copyright its respective owners
-        // Copy Cat isn't a real service, please go to your nearest animal shelter to adopt a new furry family member
-    </p>
-</footer>
 
 <script src="./assets/js/cart.js"></script>

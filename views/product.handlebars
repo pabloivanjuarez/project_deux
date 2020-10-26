@@ -1,43 +1,11 @@
-{{!-- top nav bar start --}}
-<nav class="navbar navbar-expand-lg navbar-light bg-light">
-
-  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav"
-    aria-expanded="false" aria-label="Toggle navigation">
-    <span class="navbar-toggler-icon"></span>
-  </button>
-  <div class="collapse navbar-collapse" id="navbarNav">
-    <ul class="navbar-nav ml-auto">
-      <li class="nav-item active">
-        <a class="nav-link" href="../">Home <span class="sr-only">(current)</span></a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="/products/3">Featured</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="/products">Products</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="/about/">About Us</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="/contact/">Contact</a>
-      </li>
-      <li class="shopping-cart-icon">
-        <a class="shopping-cart" href="/cart"><i class="fa fa-shopping-cart" aria-hidden="true"></i></a>
-      </li>
-    </ul>
-  </div>
-</nav>
-{{!-- top nav bar end --}}
-
 {{!-- Link to go back to the product list --}}
-<div class="container">
+<div class="container-fluid">
 <div class="m-1">
   <a href="/products">Back to Products</a>
 </div>
 
 {{!-- Displays product information --}}
-<div class="product container">
+<div class="product container-fluid">
   <div class="row">
     <div class="col-md-12">
       <a class="example-image-link m-5" href="{{products.img}}" data-lightbox="example-1" src="{{products.img}}" /> 
@@ -84,7 +52,7 @@
 
 </br>
 {{!-- reviews start here --}}
-<div class="container">
+<div class="container-fluid">
   <div class="row">
     <div class="col-md-2"></div>
     <div class="col-md-8">
@@ -138,7 +106,7 @@
 
 </br></br>
 {{!-- This is a form for users/customers to add a new review for this product --}}
-<div class="container">
+<div class="container-fluid">
   <div class="row">
     <div class="col-md-3"></div>
     <div class="col-md-6 text-center">
@@ -170,18 +138,6 @@
 </div>
 </div>
 
-{{!-- footer --}}
-<footer>
-  <p class="footer">U of O Full-stack Boot Camp Project 2, October 2020 // all content copyright its respective owners
-    // Copy Cat isn't a real service, please go to your nearest animal shelter to adopt a new furry family member
-  </p>
-</footer>
+
 <script src="/assets/js/product.js"></script>
 <script src="//cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.1/js/lightbox-plus-jquery.min.js"></script>
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js" crossorigin="anonymous"></script>
-<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
-  integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
-<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
-  integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
-  integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>

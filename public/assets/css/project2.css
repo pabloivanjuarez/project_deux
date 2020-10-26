@@ -162,3 +162,16 @@ a:hover {
     width: 75%;
     border-radius: 10px;
 }
+
+@media only screen and (max-width: 991px) {
+
+    .navbar-toggler-icon{
+        font-size: 48px;
+    }
+
+    .nav-link {
+      font-size: 48px;
+      font-family: 'Roboto Slab', serif;
+    }
+  
+   }

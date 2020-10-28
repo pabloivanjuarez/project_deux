@@ -1,6 +1,6 @@
 
   # Copy Cats
-  ![License Badge](https://img.shields.io/badge/License-MIT-blue) ![Handlebars](https://img.shields.io/badge/Handlebars-70.8%25-orange) ![JavaScript](https://img.shields.io/badge/JavaScript-19.3%25-yellow) ![CSS](https://img.shields.io/badge/CSS-9.9%25-purple)
+  ![License Badge](https://img.shields.io/badge/License-MIT-blue) ![Handlebars](https://img.shields.io/badge/Handlebars-61%25-orange) ![JavaScript](https://img.shields.io/badge/JavaScript-30.7%25-yellow) ![CSS](https://img.shields.io/badge/CSS-8.3%25-purple)
   
   ## Description
 
